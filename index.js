@@ -45,7 +45,14 @@ const createTask = async (name, status) => {
     status,
   });
 };
-createTask('Learning NextJS', 'FINISH');
+// createTask('Learning NextJS', 'FINISH');
+
+// todo getAllTask
+const getAllTask = async () => {
+  const taskList = await Task.findAll();
+  console.log('🚀CHECK  taskList =', JSON.stringify(taskList, null, 2));
+};
+// getAllTask();
 
 // todo Model synchronization
 const syncModal = async () => {

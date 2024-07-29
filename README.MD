@@ -4,3 +4,4 @@ Course 6 NodeJS with MySQL & Sequelize
 03 Model & Sync
 04 Create task
 - build & create
+05 Get all task
