@@ -7,3 +7,4 @@ Course 6 NodeJS with MySQL & Sequelize
 05 Get all task
 06 Get task by id
 07 Update task by id
+08 deleteTaskById

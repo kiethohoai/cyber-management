@@ -75,6 +75,16 @@ const updateTaskById = async (data, id) => {
 };
 // updateTaskById({ name: 'Tailwind CSS', status: 'OPEN' }, 4);
 
+// todo deleteTaskById
+const deleteTaskById = async (id) => {
+  await Task.destroy({
+    where: {
+      id,
+    },
+  });
+};
+deleteTaskById(5);
+
 // todo Model synchronization
 const syncModal = async () => {
   // await Task.sync({ alter: true });
