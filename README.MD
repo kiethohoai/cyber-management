@@ -5,3 +5,4 @@ Course 6 NodeJS with MySQL & Sequelize
 04 Create task
 - build & create
 05 Get all task
+06 Get task by id

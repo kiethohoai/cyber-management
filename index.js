@@ -54,6 +54,17 @@ const getAllTask = async () => {
 };
 // getAllTask();
 
+// todo getTaskById
+const getTaskById = async (id) => {
+  const task = await Task.findOne({
+    where: {
+      id,
+    },
+  });
+  console.log('🚀CHECK  task =', JSON.stringify(task, null, 2));
+};
+// getTaskById(4);
+
 // todo Model synchronization
 const syncModal = async () => {
   // await Task.sync({ alter: true });
