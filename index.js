@@ -22,7 +22,30 @@ const Task = sequelize.define('Task', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  status: {
+    type: DataTypes.STRING,
+  },
 });
+
+// todo Creat Task
+const createTask = async (name, status) => {
+  /*   
+  // #C1 build()
+  const newTask = Task.build({
+    name,
+    status,
+  });
+  await newTask.save();
+  console.log('Create Task Successfully!');
+ */
+
+  // #C2 create()
+  const newTask = await Task.create({
+    name,
+    status,
+  });
+};
+createTask('Learning NextJS', 'FINISH');
 
 // todo Model synchronization
 const syncModal = async () => {
@@ -30,4 +53,4 @@ const syncModal = async () => {
   await Task.sync({ force: true });
   console.log('The table for the Task model was just (re)created!');
 };
-syncModal();
+// syncModal();
