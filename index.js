@@ -1,5 +1,5 @@
 // todo Define
-const { Sequelize, DataTypes } = require('sequelize');
+const { Sequelize, DataTypes, where } = require('sequelize');
 const sequelize = new Sequelize('tm', 'root', '123456', {
   host: 'localhost',
   dialect: 'mysql',
@@ -64,6 +64,16 @@ const getTaskById = async (id) => {
   console.log('🚀CHECK  task =', JSON.stringify(task, null, 2));
 };
 // getTaskById(4);
+
+// todo updateTaskById
+const updateTaskById = async (data, id) => {
+  await Task.update(data, {
+    where: {
+      id,
+    },
+  });
+};
+// updateTaskById({ name: 'Tailwind CSS', status: 'OPEN' }, 4);
 
 // todo Model synchronization
 const syncModal = async () => {
